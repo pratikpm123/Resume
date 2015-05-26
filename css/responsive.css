@@ -1,0 +1,133 @@
+/******************************************
+Responsive
+******************************************/
+@media (max-width: 1180px){
+   
+}
+
+@media (max-width: 991px){
+.about-hobby h3{
+margin-top:50px;
+}
+.about-info{
+padding:0 auto;
+}
+
+/* Time line css - Start */
+.timeline li .timeline-panel {
+    width: 44%;
+  }
+/* Time line css - End */
+
+.contact-title h2 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+}
+@media (max-width: 600px){
+
+	.info > h1{
+        font-size: 60px;
+    }
+    .info > h3{
+        font-size: 20px;
+    }
+   
+	.avatar-section img{
+        height: 400px;
+        width: 400px;
+    } 
+	
+	/* Time line css - Start */
+	
+	ul.timeline:before {
+    left: 40px;
+  }
+  
+  .tldate { width: 250px; }
+
+  ul.timeline li .timeline-panel {
+    width: calc(100% - 90px);
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+  }
+
+  ul.timeline li .tl-circ {
+    top: 40px;
+    left: 30px;
+    margin-left: 0;
+
+  }
+  ul.timeline > li > .tldate {
+    margin: 0 40px;
+  }
+
+  ul.timeline > li > .timeline-panel {
+    float: right;
+  }
+
+  ul.timeline > li > .timeline-panel:hover>:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline > li > .timeline-panel:hover>:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }
+  
+  /*ul.timeline > li > .timeline-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+  }
+
+  ul.timeline > li > .timeline-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+  }*/
+	
+	/* Time line css - End */
+	
+.contact-title h2 {
+  font-size: 40px;
+  font-weight: 600;
+}
+	
+}
+
+@media (max-width: 480px){
+   
+   .contact-title h2 {
+  font-size: 30px;
+  font-weight: 500;
+}
+   
+}
+
+@media (max-width: 375px){
+
+	.avatar-section{
+        bottom: -150px;
+    }
+    .avatar-section img{
+        height: 300px;
+        width: 300px;
+    }
+}
+@media (max-width: 360px){
+	
+
+}
+
+@media (max-width: 320px){
+
+}
