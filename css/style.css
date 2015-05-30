@@ -671,6 +671,7 @@ bottom:0;
    background-color: #eee;
    z-index: 99;
    text-align: center;
+   z-index: 1500;
 }
 
 #loading-image {
