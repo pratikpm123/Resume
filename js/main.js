@@ -78,3 +78,6 @@ function createChart(element){
 				}, fps);
 				  
 }
+$(window).load(function() {
+     $('#loading').hide();
+  });
