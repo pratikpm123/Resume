@@ -1,0 +1,65 @@
+/*notification space managed*/
+.portlet-dockbar .dockbar .dockbar-user-notifications .dropdown-toggle .user-notifications-count {
+    margin: 0;
+}
+
+/*change the nav bar color*/
+.portlet-dockbar .dockbar .navbar-inner {
+    background-color: #2b3d51;
+    background-image: none;
+    box-shadow:none;
+}
+
+
+/*lines in navbar*/
+.portlet-dockbar .dockbar .navbar-inner .divider-vertical {
+    border-left: 0px solid #2d343d;
+    border-right: 1px solid #2d343d;
+}
+
+/*for text color of nav bar*/
+.portlet-dockbar .dockbar .navbar-inner .nav > li > a {
+    color: #959ea8;
+    text-shadow: none;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav > li > a:focus, .dockbar .navbar-inner .nav> li > a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/*to remove white color of tabs while dropdown open*/
+.portlet-dockbar .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle, .dockbar .navbar-inner .nav li.dropdown.active > .dropdown-toggle, .dockbar .navbar-inner .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #2b3d51;
+    color: #fff;
+}
+
+/*to remove shadow of navbar*/
+.portlet-dockbar .navbar-fixed-top .navbar-inner, .aui .navbar-static-top .navbar-inner {
+    box-shadow: none;
+}
+
+/*for popup of admin does not create horizontal scroll bar*/
+.portlet-dockbar .navbar .nav {
+    margin: 0 20px 0 0;
+}
+
+/*User Image round*/
+.portlet-dockbar .dockbar .user-avatar img {
+    border-radius: 50%;
+}
+
+
+
+
+.portlet-dockbar .dockbar .dockbar-user-notifications {
+	background:rgba(0, 0, 0, 0) url("../images/bell.png") no-repeat scroll 2px 22px / 22px auto;
+}
+
+.portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .nav a:hover, .notifications-portlet .nav a.selected, .notifications-portlet .user-notifications-list-container {
+    border-radius: 50%;
+}
+
+.portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .user-notifications-count {
+    border: none;
+}
