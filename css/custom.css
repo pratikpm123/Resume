@@ -53,7 +53,7 @@
 
 
 .portlet-dockbar .dockbar .dockbar-user-notifications {
-	background:rgba(0, 0, 0, 0) url("../images/bell.png") no-repeat scroll 2px 22px / 22px auto;
+	background:rgba(0, 0, 0, 0) url("../images/bell.png") no-repeat scroll 2px 15px / 22px auto;
 }
 
 .portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .nav a:hover, .notifications-portlet .nav a.selected, .notifications-portlet .user-notifications-list-container {
@@ -62,4 +62,5 @@
 
 .portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .user-notifications-count {
     border: none;
+    top:-5px;
 }
