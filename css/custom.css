@@ -15,6 +15,7 @@
 .portlet-dockbar .dockbar .navbar-inner .divider-vertical {
     border-left: 0px solid #2d343d;
     border-right: 1px solid #2d343d;
+    margin:0;
 }
 
 /*for text color of nav bar*/
@@ -30,7 +31,7 @@
 
 /*to remove white color of tabs while dropdown open*/
 .portlet-dockbar .dockbar .navbar-inner .nav li.dropdown.open > .dropdown-toggle, .dockbar .navbar-inner .nav li.dropdown.active > .dropdown-toggle, .dockbar .navbar-inner .nav li.dropdown.open.active > .dropdown-toggle {
-    background-color: #2b3d51;
+    background-color: initial;
     color: #fff;
 }
 
@@ -51,16 +52,112 @@
 
 
 
+/*Bell in notification*/
+/* .portlet-dockbar .dockbar .dockbar-user-notifications {
+	background:rgba(0, 0, 0, 0) url("../images/bell.png") no-repeat;
+	background-position: center;
+	background-size :25px;
+} */
 
-.portlet-dockbar .dockbar .dockbar-user-notifications {
-	background:rgba(0, 0, 0, 0) url("../images/bell.png") no-repeat scroll 2px 15px / 22px auto;
+.portlet-dockbar .dockbar .dockbar-user-notifications .user-notification-link {
+	position: relative;
 }
-
+.portlet-dockbar .dockbar .dockbar-user-notifications .user-notification-link:before {
+    content: "\f0f3";
+    font-family: "fontawesome-alloy";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    position : absolute;
+}
+/*Notification num square to circle*/
 .portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .nav a:hover, .notifications-portlet .nav a.selected, .notifications-portlet .user-notifications-list-container {
     border-radius: 50%;
 }
 
+/*Position of notification box*/
 .portlet-dockbar .dockbar .dockbar-user-notifications .user-notifications-count, .notifications-portlet .user-notifications-count {
     border: none;
-    top:-5px;
+    top:-6px;
+    left:8px;
+    font-size: 12px;
+    font-weight:600;
+    padding: 2px 6px;
+}
+
+
+
+/* .portlet-dockbar .dockbar .navbar-inner .nav .admin-links{
+	background:rgba(0, 0, 0, 0) url("../images/settings.png") no-repeat;
+	background-position: center;
+	background-size :25px;
+	padding : 0 5px;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle .icon-caret-down{
+	display: none;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle {
+	height:20px;
+} */
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle{
+    position: relative;
+}
+ 
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle:before {
+    content: "\f013";
+    font-family: "fontawesome-alloy";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle .icon-caret-down{
+	display: none;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .admin-links .dropdown-toggle {
+	height:20px;
+}
+
+
+/*.portlet-dockbar .dockbar .navbar-inner .nav .my-sites{
+	background:rgba(0, 0, 0, 0) url("../images/site.png") no-repeat;
+	background-position: center;
+	background-size :25px;
+	padding : 0 5px;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle .icon-caret-down{
+	display: none;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle {
+	height:20px;
+}*/
+
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle{
+    position: relative;
+}
+ 
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle:before {
+    content: "\f0ac";
+    font-family: "fontawesome-alloy";
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle .icon-caret-down{
+	display: none;
+}
+
+.portlet-dockbar .dockbar .navbar-inner .nav .my-sites .dropdown-toggle {
+	height:20px;
+}
+
+
+
+.portlet-dockbar .dockbar .navbar-inner .nav .site-add-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .page-preview-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .page-edit-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .toggle-controls .nav-item-label{
+	display: none;
 }
