@@ -368,3 +368,31 @@
 <a href="$Youtube_link.getData()" target="_blank"><img src="${imagePath}/youtube.png" /></a>
 #end
 </div>
+
+
+---------------------------------footer portal normail vm------------------------------------------
+
+<footer id="footer" role="contentinfo">
+<div class="container">
+		<div class="row">
+			#set ($VOID = $velocityPortletPreferences.setValue('groupId', $themeDisplay.getScopeGroupId().toString()))
+			#set ($VOID = $velocityPortletPreferences.setValue('articleId', '37149'))
+			#set ($VOID = $velocityPortletPreferences.setValue('portletSetupShowBorders', 'false'))
+			#set ($portlet_id = '56')
+			#set ($instance_id = "footer1")
+			#set ($my_portlet_id = "${portlet_id}_INSTANCE_${instance_id}")
+			$theme.runtime($my_portlet_id, "", $velocityPortletPreferences.toString())
+			$velocityPortletPreferences.reset()
+		</div>	
+		<div class="row">
+			<div class="span6">
+				<p>Terms of Use | Privacy Policy &reg; COPYRIGHT 2014-2015</p>
+			</div>
+			<div class="span6">
+				<p class="powered-by">
+					#language ("powered-by") <a href="http://www.google.com" rel="external">PPM</a>
+				</p>
+			</div>
+		</div>
+</div>
+</footer>
