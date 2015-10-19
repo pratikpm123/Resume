@@ -161,3 +161,173 @@
 .portlet-dockbar .dockbar .navbar-inner .nav .site-add-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .page-preview-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .page-edit-controls .nav-item-label,.portlet-dockbar .dockbar .navbar-inner .nav .toggle-controls .nav-item-label{
 	display: none;
 }
+
+
+
+
+--------------------------------------footer Structure----------------------------------------------
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" name="Display_Name" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" name="Link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="large">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Link]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Display Name]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" name="Facebook" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Facebook]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="Facebook_link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Facebook link]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" name="Twitter" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Twitter]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="Twitter_link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Twitter link]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" name="LinkedIn" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[LinkedIn]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="Linkedin_link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Linkedin link]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="boolean" indexType="keyword" name="Youtube" readOnly="false" repeatable="false" required="false" showLabel="true" type="checkbox" width="">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Youtube]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[false]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="Youtube_link" readOnly="false" repeatable="false" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Youtube link]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
+
+
+------------------------------------footer template---------------------------------------
+
+<div class="span8 footerlinks">
+#if (!$Display_Name.getSiblings().isEmpty())
+<ul>
+	#foreach ($cur_Display_Name in $Display_Name.getSiblings())
+	<li><a href="$cur_Display_Name.Link.getData()">$cur_Display_Name.getData()</a></li>
+	#end
+</ul>
+#end
+</div>
+
+<div class="span4 Social-icons">
+#set ($imagePath = $request.get("theme-display").path-theme-images)
+#if ($getterUtil.getBoolean($Facebook.getData()))
+<a href="$Facebook_link.getData()" target="_blank"><img src="${imagePath}/fb.png" /></a>
+#end
+
+#if ($getterUtil.getBoolean($Twitter.getData()))
+<a href="$Twitter_link.getData()" target="_blank"><img src="${imagePath}/twitter.png" /></a>
+#end
+
+#if ($getterUtil.getBoolean($LinkedIn.getData()))
+<a href="$Linkedin_link.getData()" target="_blank"><img src="${imagePath}/linkedin.png" /></a>
+#end
+
+#if ($getterUtil.getBoolean($Youtube.getData()))
+<a href="$Youtube_link.getData()" target="_blank"><img src="${imagePath}/youtube.png" /></a>
+#end
+</div>
