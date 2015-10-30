@@ -684,3 +684,146 @@ $column_3.getData()
 </div>
 
 </div>
+------------------------------------------------------------------------------------------------------------------------
+left pannel in doc and media
+.aui .well {
+    background-color: whitesmoke;
+    border: 1px solid #e3e3e3;
+    border-radius: 0; -----------------------------------------------------------------------------
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+    padding: 19px;
+}
+
+navbar in doc and media
+.aui .navbar-inner {
+    background-color: #f6f6f6;
+    background-image: linear-gradient(to bottom, #f9f9f9, #f3f3f3);
+    background-repeat: repeat-x;
+    border: 1px solid #dddddd;
+    border-radius: 0;---------------------------------------------------------------------------
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
+    min-height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+breadcrumb in doc and media
+.aui .breadcrumb {
+    background-color: #f5f5f5;
+    border-radius: 0;---------------------------------------------------------------------------
+    list-style: outside none none;
+    margin: 0 0 20px;
+    padding: 8px 15px;
+}
+
+blue msg in doc and media
+.aui .alert, .aui .portlet-msg-alert, .aui .portlet-msg-error, .aui .portlet-msg-help, .aui .portlet-msg-info, .aui .portlet-msg-progress, .aui .portlet-msg-success {
+    background-color: #fffbdc;
+    border: 1px solid #f1d875;
+    border-radius: 0;---------------------------------------------------------------------------
+    margin-bottom: 20px;
+    padding: 8px 35px 8px 14px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+
+medias in doc and media
+.entry-display-style, .lfr-search-combobox, .lfr-upload-container .upload-file, .lfr-upload-container .upload-target, .portlet-document-library .common-file-metadata-container.selected, .portlet-document-library-display .common-file-metadata-container.selected, .portlet-image-gallery-display .image-icon, .select-documents, .select-files {
+    border-radius: 0;
+}
+
+
+top left dropdown for icon/list/descriptive in doc and media
+.aui .btn-group > .btn:first-child {
+    border-bottom-left-radius: 0;---------------------------------------------------------------------------
+    border-top-left-radius: 0;---------------------------------------------------------------------------
+    margin-left: 0;
+}
+.aui .btn-group > .btn:last-child, .aui .btn-group > .dropdown-toggle {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+
+
+Sign in portlet text box
+.aui select, .aui textarea, .aui input[type="text"], .aui input[type="password"], .aui input[type="datetime"], .aui input[type="datetime-local"], .aui input[type="date"], .aui input[type="month"], .aui input[type="time"], .aui input[type="week"], .aui input[type="number"], .aui input[type="email"], .aui input[type="url"], .aui input[type="search"], .aui input[type="tel"], .aui input[type="color"], .aui .uneditable-input {
+    border-radius: 0;---------------------------------------------------------------------------
+    color: #555555;
+    display: inline-block;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    padding: 4px 6px;
+    vertical-align: middle;
+}
+
+search box in doc and media
+.aui .form-search .input-append .search-query {
+    border-radius: 0;
+}
+.aui .form-search .input-append .btn {
+    border-radius: 0;
+}
+
+
+sign in portlet bottom div with create account and forgot password
+.portlet-login .navigation {
+    background: none;---------------------------------------------------------------------------
+    border-top: 0;---------------------------------------------------------------------------
+    padding: 0;---------------------------------------------------------------------------
+}
+
+tabs
+.aui .nav-tabs {
+    background: #eee none repeat scroll 0 0;-------------------
+    border-bottom: 1px solid #ddd;
+}
+
+.aui .nav-tabs > li {
+    margin-bottom: 0;
+}
+
+.aui .nav-tabs > li > a {
+    border: 1px solid transparent;
+    border-radius: 0;-------------------------
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.aui .nav-tabs > .active > a, .aui .nav-tabs > .active > a:hover, .aui .nav-tabs > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: #eee;------------------------------------
+    border-image: none;
+    border-style: solid;
+    border-width: 0 0 3px;-----------------------------------
+    color: #555555;
+    cursor: default;
+}
+
+
+
+.aui .nav-tabs > li > a:hover, .aui .nav-tabs > li > a:focus {
+    border-color: transparent; ---------------------------------
+	border-width: 0 0 3px;---------------------------------------
+}
+
+.aui .nav > li > a:hover, .aui .nav > li > a:focus {
+    background-color: transparent;--------------------------------
+    text-decoration: none;
+}
+
+.aui .nav-tabs > li > a {
+    border: 1px solid transparent;
+    border-radius: 0; ---------------------------------
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
