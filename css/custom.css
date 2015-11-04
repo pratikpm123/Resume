@@ -827,3 +827,96 @@ tabs
     padding-bottom: 8px;
     padding-top: 8px;
 }
+
+--------------------------------------------4/11-----------------------------------------------------
+/*****************************Tabs**************************************/
+
+.aui .nav-tabs > li {
+    margin-bottom: 0;
+}
+
+.aui .nav-tabs {
+    border-bottom: medium none;
+}
+
+
+.aui .nav-tabs > .active > a, .aui .nav-tabs > .active > a:hover, .aui .nav-tabs > .active > a:focus {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: white;
+    border-color: transparent transparent #22b7e5;------------------------
+    border-image: none;
+    border-style: solid;
+    border-width: 3px;------------------------
+    color: #22b7e5;------------------------
+    cursor: default;
+    font-weight: bold;------------------------added
+}
+
+.aui a {
+    color: #555;--------------------------
+    text-decoration: none;
+}
+
+
+.aui .nav-tabs > li > a:hover, .aui .nav-tabs > li > a:focus {
+    border-color: transparent transparent #22b7e5;------------------
+	border-width: 3px;-------added
+}
+
+.aui .nav > li > a:hover, .aui .nav > li > a:focus {
+    background-color: transparent;----------------
+    text-decoration: none;
+}
+
+.aui .nav-tabs > li > a {
+    border: 3px solid transparent;------------------
+    border-radius: 0; -------------------------
+    line-height: 20px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+
+.aui a:hover, .aui a:focus {
+    color: #22b7e5;
+    text-decoration: underline;
+}
+
+/*****************************Tabs end**************************************/
+
+
+
+
+/********************************button in nav bar**********************************/
+
+
+.aui .navbar .nav > li > a:focus, .aui .navbar .nav > li > a:hover {
+    background-color: #007095;--------------
+    color: #fff;---------------------
+    text-decoration: none;
+}
+
+.aui .navbar .nav > li > a {
+    background-color: #008cba;-----
+    border-color: #007095;------------
+    color: #fff;----------
+    float: none;
+    margin-right: 5px;---------- added
+    padding: 10px 15px;
+    text-decoration: none;---------------
+    text-shadow: none;---------------
+}
+
+
+for wiki portlet
+
+.aui .navbar .nav > .active > a, .aui .navbar .nav > .active > a:hover, .aui .navbar .nav > .active > a:focus {
+    background-color: #007095;
+    box-shadow: none;
+    color: #fff;
+    text-decoration: none;
+}
+
+/********************************button in nav bar end**********************************/
