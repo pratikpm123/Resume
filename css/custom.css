@@ -920,3 +920,32 @@ for wiki portlet
 }
 
 /********************************button in nav bar end**********************************/
+
+
+
+
+/******************************************search container table******************************************/
+
+.aui .table-hover tbody tr:hover > .first {
+    border-left: 4px solid #6ad1df;
+}
+.aui .table-hover tbody tr:hover > td, .aui .table-hover tbody tr:hover > th {
+    background-color: #f2fdff;
+}
+.aui .table-bordered th, .aui .table-bordered td {
+    border-left: 4px solid transparent;
+}
+
+.aui .table-striped tbody > tr:nth-child(2n+1) > td, .aui .table-striped tbody > tr:nth-child(2n+1) > th {
+    background-color: #f9fcfd;
+}
+.aui .table th, .aui .table td {
+    border-top: medium none;----------------------------------
+    line-height: 20px;
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+
+/******************************************search container table end******************************************/
