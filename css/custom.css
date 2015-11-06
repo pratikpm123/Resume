@@ -949,3 +949,45 @@ for wiki portlet
 
 
 /******************************************search container table end******************************************/
+
+/******************************************search container previos nex button and text******************************************/
+
+
+.aui .pager li > a, .aui .pager li > span {
+    background-color: #23b7e5;-------------
+    border: none;-------------------
+    border-radius: 5px;------------------------
+    display: inline-block;
+    padding: 5px 14px;
+}
+
+.aui a {
+    color: #fff;------------------------
+    text-decoration: none;
+}
+
+
+.aui .pager li > a:hover, .aui .pager li > a:focus {
+    background-color: #0087de;
+    text-decoration: none;
+}
+
+.aui a:hover, .aui a:focus {
+    color: #fff;
+    text-decoration: underline;
+}
+
+
+.aui .pager .disabled > a, .aui .pager .disabled > a:hover, .aui .pager .disabled > a:focus, .aui .pager .disabled > span {
+    background-color: #0087de;-----------------------------
+    color: #999999;
+    cursor: default;
+}
+
+.lfr-pagination {
+    color: #217aa0;
+}
+
+/******************************************search container  previos nex button and text end******************************************/
+
+
