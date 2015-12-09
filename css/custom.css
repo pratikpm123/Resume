@@ -990,6 +990,27 @@ for wiki portlet
 
 /******************************************search container  previos nex button and text end******************************************/
 
+
+
+/*************************portfolio image overlay*****************************************************************************/
+<div class="project-item">
+            <div class="project-image">
+                <a href="portfolio-single.html">
+                    #if (!$Image1820.getSiblings().isEmpty())
+                    	#foreach ($cur_Image1820 in $Image1820.getSiblings())
+                    	<img alt="Image" src="$cur_Image1820.getData()"/>
+                    	#end
+                    #end
+                    <div class="overlay">
+                        <div class="details">
+                            <h2>portfolio title design</h2>
+                            <p>developed for <span>Envato</span></p>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- end .project-image -->
+        </div>
+
 .project-item .project-image {
     box-sizing: border-box;
     list-style: outside none none;
@@ -1011,6 +1032,14 @@ for wiki portlet
 .project-image:hover .overlay {
     opacity: 1;
 }
+
+.project-image:hover img{
+	-webkit-transform: scale(1.5); 
+    -moz-transform: scale(1.5);
+    -o-transform: scale(1.5);
+    transform: scale(1.5);
+}
+
 .project-image .overlay {
     background-clip: padding-box;
     box-sizing: border-box;
@@ -1028,24 +1057,5 @@ for wiki portlet
     list-style: outside none none;
 }
 
-<div class="project-item">
-            <div class="project-image">
-                <a href="portfolio-single.html">
-                    #if (!$Image1820.getSiblings().isEmpty())
-                    	#foreach ($cur_Image1820 in $Image1820.getSiblings())
-                    	<img alt="Image" src="$cur_Image1820.getData()"/>
-                    	#end
-                    #end
-                    <div class="overlay">
-                        <div class="details">
-                            <h2>portfolio title design</h2>
-                            <p>developed for <span>Envato</span></p>
-                        </div>
-                    </div>
-                </a>
-            </div><!-- end .project-image -->
-        </div>
-
-/*************************portfolio image overlay*****************************************************************************/
 
 /*************************portfolio image overlay end*************************************************************************/
