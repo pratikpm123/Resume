@@ -1059,3 +1059,101 @@ for wiki portlet
 
 
 /*************************portfolio image overlay end*************************************************************************/
+/*****************************************************Bar chart *****************************************************************/
+
+structure------>
+
+<root available-locales="en_US" default-locale="en_US">
+	<dynamic-element dataType="string" indexType="keyword" name="horizontal_plots" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Horizontal plots]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+	<dynamic-element dataType="string" indexType="keyword" name="bar_lable" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+		<dynamic-element dataType="string" indexType="keyword" name="bar_value" readOnly="false" repeatable="true" required="false" showLabel="true" type="text" width="small">
+			<meta-data locale="en_US">
+				<entry name="label">
+					<![CDATA[Bar Value]]>
+				</entry>
+				<entry name="predefinedValue">
+					<![CDATA[]]>
+				</entry>
+				<entry name="tip">
+					<![CDATA[]]>
+				</entry>
+			</meta-data>
+		</dynamic-element>
+		<meta-data locale="en_US">
+			<entry name="label">
+				<![CDATA[Bar Lable]]>
+			</entry>
+			<entry name="predefinedValue">
+				<![CDATA[]]>
+			</entry>
+			<entry name="tip">
+				<![CDATA[]]>
+			</entry>
+		</meta-data>
+	</dynamic-element>
+</root>
+
+template------>
+#if (!$horizontal_plots.getSiblings().isEmpty())
+	#foreach ($cur_horizontal_plots in $horizontal_plots.getSiblings())
+	<input type="text" value="$cur_horizontal_plots.getData()" class="horizontal_plots">
+	#end
+#end	
+
+#if (!$bar_lable.getSiblings().isEmpty())
+    #foreach ($cur_bar_lable in $bar_lable.getSiblings())
+    <br>
+        	<input type="text" value="$cur_bar_lable.getData()" class="bar_labels">--->
+        	<div class="bar_labels_div">
+        	#if (!$cur_bar_lable.bar_value.getSiblings().isEmpty())
+            	#foreach ($cur_bar_value in $cur_bar_lable.bar_value.getSiblings())
+            	<input type="text" value="$cur_bar_value.getData()" class="bar_values">
+            	#end
+            #end
+            </div>
+    #end
+#end
+
+<script>
+var horizontal_plots = [];
+$(".horizontal_plots").each(function() {
+    horizontal_plots.push($(this).val());
+});
+console.log(horizontal_plots);
+var datasets = [];
+$(".bar_labels_div").each(function() {
+    var data = [];
+   
+    console.log(this);
+    $(this).find(".bar_values").each(function() {
+        data.push($(this).val());
+    });
+    var dataset= new JSONObject();
+    dataset.put("fillColor", "rgba(220,220,220,0.5)");
+    dataset.put("data",data);
+    datasets.push(dataset);
+    
+    console.log(data);
+    console.log(dataset);
+});
+
+var jsonObj= new JSONObject();
+    jsonObj.put("labels", horizontal_plots);
+    jsonObj.put("datasets", datasets);
+    
+    console.log(jsonObj);
+
+</script>
+/*****************************************************Bar chart end**************************************************************/
